@@ -66,7 +66,8 @@ a:hover {
       font-size: 20px;
       font-weight: bold;
       text-align: center;
-      border-radius: 3px
+      border-radius: 3px;
+      opacity: 0;
     }
   </style>
 </head>
@@ -74,7 +75,7 @@ a:hover {
 <div class="rogobg" id="rogobg"></div>
 <img src="yudofuicon.png" class="rogo" id="rogo">
 <p class="title" id="title">湯豆腐サイトへようこそ</p>
-<div class="enter">主の覚え書き（メインページ）を見る</div>
+<div class="enter" id="mainenter">主の覚え書き（メインページ）を見る</div>
 <p class="gaiyo" id="gaiyo">fc2ホームページで公開してましたが<br>GitHubの試用も兼ねてこちらにもページを作りました。<br>
 <a href="https://yudofusite.web.fc2.com"><u>fc2版</u></a>も見てってね</p>
   <script>
@@ -95,11 +96,13 @@ a:hover {
     },1000);
    let rogobg = document.getElementById("rogobg");
    let gaiyo = document.getElementById("gaiyo");
+   let ent = document.getElementById("mainenter");
    setTimeout(function () {
       rogobg.style.opacity = 0;
       rogobg.style.display = "none";
       rogo.style.display = "none";
       gaiyo.style.opacity = 1;
+      ent.style.display = 1;
     },1200);
 
   </script>
